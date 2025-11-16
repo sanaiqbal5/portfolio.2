@@ -1,272 +1,249 @@
-<p align="center" width="100%">
-  
+# Portfolio - Sana Iqbal
+
+<p align="center">
+  <img src="./public/image/screen.png" alt="Portfolio Screenshot" width="800"/>
 </p>
 
----
+A modern, responsive portfolio website built with Next.js 15, showcasing my work, skills, and experience as a Software Engineer and Full Stack Developer.
 
+## 🌟 Features
 
----
+- **Modern Design**: Clean, professional UI with smooth animations
+- **Responsive**: Fully responsive design that works on all devices
+- **Fast Performance**: Optimized with Next.js 15 and React 19
+- **Dynamic Content**: Fetches blog posts from dev.to automatically
+- **Interactive Sections**: 
+  - Hero section with animated Lottie graphics
+  - Skills showcase with technology icons
+  - Project portfolio with detailed descriptions
+  - Experience timeline
+  - Education history
+  - Contact form with email integration
 
-# Developer Portfolio
+## 🚀 Tech Stack
 
-#### Are you struggling to create a professional portfolio website? Look no further! You can use the Developer Portfolio template and create your very own personalized portfolio today! My website is designed to be user-friendly and easily customizable, making it perfect for both developers and freelancers.
+- **Framework**: Next.js 15.1.1
+- **UI Library**: React 19.0.0
+- **Styling**: Tailwind CSS + SASS
+- **Animations**: Lottie React
+- **Icons**: React Icons
+- **Form Handling**: React Toastify, EmailJS
+- **Deployment**: Vercel-ready
 
----
+## 📋 Sections
 
-# Demo :movie_camera:
+- **Hero Section**: Introduction with animated graphics
+- **About Me**: Personal description and background
+- **Experience**: Professional work experience timeline
+- **Skills**: Technology stack and tools
+- **Projects**: Featured projects with descriptions and links
+- **Education**: Academic background
+- **Contact**: Contact form and social media links
 
-![](./public/image/screen.png)
+## 🛠️ Installation
 
+### Prerequisites
 
----
+- Node.js (v18 or higher)
+- npm or yarn
+- Git
 
-## Table of Contents :scroll:
+### Setup
 
-- [Sections](#sections-bookmark)
-- [Demo](#demo-movie_camera)
-- [Installation](#installation-arrow_down)
-- [Getting Started](#getting-started-dart)
-- [Usage](#usage-joystick)
-- [Deployment](#deployment-rocket)
-- [Tutorials](#tutorials-wrench)
-  - [Gmail App Password Setup](#gmail-app-password-setup)
-  - [Create a Telegram Bot](#create-a-telegram-bot)
-  - [Fetching Blog from dev.to](#fetching-blog-from-devto)
-- [Packages Used](#packages-used-package)
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/sanaiqbal5/portfolio.2.git
+   cd portfolio.2
+   ```
 
----
+2. **Install dependencies**:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-# Sections :bookmark:
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-- HERO SECTION
-- ABOUT ME
-- EXPERIENCE
-- SKILLS
-- PROJECTS
-- EDUCATION
-- BLOG
-- CONTACTS
+4. **Open your browser**:
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
----
+## ⚙️ Configuration
 
-# Installation :arrow_down:
+### Environment Variables (Optional)
 
-### You will need to download Git and Node to run this project
-
-- [Git](https://git-scm.com/downloads)
-- [Node](https://nodejs.org/en/download/)
-
-#### Make sure you have the latest version of both Git and Node on your computer.
-
-```bash
-node --version
-git --version
-```
-
-## <br />
-
-# Getting Started :dart:
-
-### Fork and Clone the repo
-
-To Fork the repo click on the fork button at the top right of the page. Once the repo is forked open your terminal and perform the following commands
-
-```bash
-git clone https://github.com/<YOUR GITHUB USERNAME>/developer-portfolio.git
-
-cd developer-portfolio
-```
-
-### Install packages from the root directory
-
-```bash
-npm install
-# or
-yarn install
-```
-
-Then, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
----
-
-### Running with Docker Compose
-
-1. **Build Docker Image and Run Container**:
-    ```bash
-    docker-compose up --build
-    ```
-
-2. **Access the Application**:
-    Visit [http://localhost:3000](http://localhost:3000) in your web browser to view the running application.
-
----
-
-### Building the Docker Image
-
-1. **Build the Docker Image using Dockerfile.dev**:
-
-    ```bash
-    docker build -t nextjs-app -f Dockerfile.dev .
-    ```
-
-2. **Running the Docker Container**:
-
-    ```bash
-    docker run -p 3000:3000 nextjs-app
-    ```
-
-3. **Access the Application**:
-    Visit [http://localhost:3000](http://localhost:3000) in your web browser to view the running application.
-
----
-
-# Usage :joystick:
-
-Please create a new `.env` file from `.env.example` file.
-
-Eg:
+Create a `.env` file in the root directory for optional features:
 
 ```env
-NEXT_PUBLIC_GTM =
-NEXT_PUBLIC_APP_URL =
-TELEGRAM_BOT_TOKEN =
-TELEGRAM_CHAT_ID =
-GMAIL_PASSKEY =
-EMAIL_ADDRESS =
+NEXT_PUBLIC_GTM=your_google_tag_manager_id
+NEXT_PUBLIC_APP_URL=your_app_url
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+TELEGRAM_CHAT_ID=your_telegram_chat_id
+GMAIL_PASSKEY=your_gmail_app_password
+EMAIL_ADDRESS=your_email_address
 ```
 
+**Note**: The portfolio works without these variables. They're only needed for:
+- Google Tag Manager analytics
+- Telegram notifications for contact form
+- Email functionality
 
-Eg:
+### Personalize Your Portfolio
+
+Update your personal information in `utils/data/personal-data.js`:
 
 ```javascript
 export const personalData = {
-  name: "Sana Iqbal",
-  profile: "/profile.png",
-  designation: "Full-Stack Software Developer",
-  description: "My name is Sana Iqbal....",
-  email: "sana.iqbal.siqbal@gmail.com",
-  phone: "+00000",
-  address: "Punjab, Pakistan",
-  github: "https://github.com/sana-iqbal-esipick",
-  facebook: "https://www.facebook.com/",
-  linkedIn: "https://www.linkedin.com/in/sana-iqbal-43b947212/",
-  twitter: "https://twitter.com/",
-  stackOverflow: "https://stackoverflow.com/",
-  leetcode: "https://leetcode.com/",
-  devUsername: "sanaiqbal",
-  resume: "...",
+  name: "Your Name",
+  profile: '/profile.JPEG',
+  designation: "Your Title",
+  description: "Your description...",
+  email: 'your.email@example.com',
+  phone: '+1234567890',
+  address: 'Your Location',
+  github: 'https://github.com/yourusername',
+  linkedIn: 'https://www.linkedin.com/in/yourprofile',
+  devUsername: "your-devto-username",
+  resume: "your-resume-link",
 };
 ```
 
-`devUsername` is used for fetching blog posts from `dev.to`.
+The `devUsername` is used to automatically fetch your blog posts from dev.to.
 
----
+## 🐳 Docker Support
 
-# Deployment :rocket:
-
-Deploying the app to platforms like Vercel or Netlify is quick and easy.
-
-## Deploying to Vercel:
-
-1. **Sign up or log in** to [Vercel](https://vercel.com/).
-2. Once logged in, click on **"New Project"**.
-3. Select your **GitHub repo** (the one that contains your forked project) and click **Import**.
-4. Configure your environment variables in the Vercel dashboard by adding each key from your `.env` file.
-   - E.g., `NEXT_PUBLIC_GTM`, `NEXT_PUBLIC_APP_URL`, `TELEGRAM_BOT_TOKEN`, etc.
-5. Click on **Deploy**. Vercel will automatically detect your Next.js app and build it.
-6. Once the deployment is complete, you can visit your live website!
-
-### Updating After Deployment
-
-Whenever you push changes to your GitHub repo, Vercel will automatically redeploy the app, keeping your portfolio up-to-date.
-
-## Deploying to Netlify:
-
-1. **Sign up or log in** to [Netlify](https://www.netlify.com/).
-2. In the **Netlify Dashboard**, click **"New site from Git"**.
-3. Connect your **GitHub** account and select your repo.
-4. Configure your environment variables by going to **Site Settings > Build & Deploy > Environment** and adding keys from your `.env` file.
-5. Click **Deploy Site**. Netlify will build and deploy your portfolio.
-
----
-
-# Tutorials :wrench:
-
-## Gmail App Password Setup
-
-1. **Log in to your Google Account** at [https://myaccount.google.com/](https://myaccount.google.com/).
-2. Navigate to **Security** from the left sidebar.
-3. Scroll down to the **"Signing in to Google"** section and make sure **2-Step Verification** is turned ON.
-4. Once 2-Step Verification is enabled, you'll see an option for **App Passwords**.
-5. Click on **App Passwords**. You may need to enter your Google account password again.
-6. In the **Select app** dropdown, choose "Mail", and for **Select device**, choose "Other (Custom name)" and name it appropriately (e.g., "Portfolio").
-7. Click **Generate**. A 16-character app password will be displayed. Save this password for later use in your environment variables (e.g., `GMAIL_PASSKEY`).
-
-## Create a Telegram Bot
-
-1. **Open Telegram** and search for the user **@BotFather**.
-2. Start a chat with BotFather and use the `/newbot` command to create a new bot.
-3. Choose a name for your bot.
-4. Set a unique username for your bot (must end with `bot`, e.g., `PortfolioAssistantBot`).
-5. Once your bot is created, BotFather will send you a **Token**. Save this token, as you will need it for your environment variables (e.g., `TELEGRAM_BOT_TOKEN`).
-6. To get your chat ID:
-   - Open your bot in Telegram and send it a message.
-   - Visit the following URL in your browser, replacing `BOT_TOKEN` with your actual bot token:  
-     `https://api.telegram.org/bot<BOT_TOKEN>/getUpdates`
-   - Look for the `chat` object in the response, which contains your **chat ID** (you can use this value for `TELEGRAM_CHAT_ID`).
-
-## Fetching Blog from dev.to
-
-To display your blog posts from dev.to on the portfolio:
-
-1. Set your `devUsername` in the `utils/data.js` file to your dev.to username.
-2. The application will automatically fetch your latest blog posts and display them in the **BLOG** section.
-3. Ensure your blogs are publicly visible on dev.to, and the application will fetch them using the dev.to API.
-
----
-
-# Packages Used :package:
-
-|   Used Package List    |
-| :--------------------: |
-|    @emailjs/browser    |
-|  @next/third-parties   |
-|         axios          |
-|      lottie-react      |
-|          next          |
-|       nodemailer       |
-|         react          |
-|       react-dom        |
-|   react-fast-marquee   |
-| react-google-recaptcha |
-|      react-icons       |
-|     react-toastify     |
-|         sharp          |
-|          sass          |
-|      tailwindcss       |
-
----
-
-# FAQ:
-
-1. For those facing the issue of "`next` is not recognized as an internal or external command, operable program or batch file."
-
-Run the following command:
+### Using Docker Compose
 
 ```bash
-
-npm install -g next
-
+docker-compose up --build
 ```
 
-This installs Next.js globally
+### Using Dockerfile
 
-then do the usual `npm run dev`
+```bash
+# Development
+docker build -t portfolio-dev -f Dockerfile.dev .
+docker run -p 3000:3000 portfolio-dev
+
+# Production
+docker build -t portfolio-prod -f Dockerfile.prod .
+docker run -p 3000:3000 portfolio-prod
+```
+
+## 🚀 Deployment
+
+### Deploy to Vercel (Recommended)
+
+1. **Push your code to GitHub**:
+   ```bash
+   git add .
+   git commit -m "Ready for deployment"
+   git push origin main
+   ```
+
+2. **Deploy via Vercel Dashboard**:
+   - Go to [vercel.com](https://vercel.com)
+   - Sign in with GitHub
+   - Click "Add New Project"
+   - Import your repository (`portfolio.2`)
+   - Vercel will auto-detect Next.js settings
+   - Add environment variables if needed
+   - Click "Deploy"
+
+3. **Deploy via Vercel CLI**:
+   ```bash
+   npm i -g vercel
+   vercel login
+   vercel --prod
+   ```
+
+### Deploy to Netlify
+
+1. **Sign up** at [netlify.com](https://www.netlify.com)
+2. **Connect GitHub** and select your repository
+3. **Configure build settings**:
+   - Build command: `npm run build`
+   - Publish directory: `.next`
+4. **Add environment variables** in Site Settings
+5. **Deploy**
+
+## 📦 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 🎨 Customization
+
+### Update Projects
+
+Edit `utils/data/projects-data.js` to add or modify your projects.
+
+### Update Skills
+
+Modify `utils/data/skills.js` to showcase your technology stack.
+
+### Update Experience & Education
+
+Edit `utils/data/experience.js` and `utils/data/educations.js` respectively.
+
+### Styling
+
+- Global styles: `app/css/globals.scss`
+- Component styles: `app/css/card.scss`
+- Tailwind config: `tailwind.config.js`
+
+## 📚 Dependencies
+
+### Core
+- `next` - React framework
+- `react` & `react-dom` - UI library
+- `tailwindcss` - CSS framework
+- `sass` - CSS preprocessor
+
+### Features
+- `lottie-react` - Animations
+- `react-icons` - Icon library
+- `react-toastify` - Toast notifications
+- `@emailjs/browser` - Email service
+- `react-fast-marquee` - Scrolling animations
+- `react-google-recaptcha` - Form validation
+- `@next/third-parties` - Third-party integrations
+
+## 🔧 Build Fixes
+
+This project includes fixes for:
+- ✅ SSR (Server-Side Rendering) compatibility
+- ✅ Dynamic page rendering for optimal performance
+- ✅ Client-side Google Tag Manager integration
+- ✅ Error handling for external API calls
+
+## 📝 License
+
+This project is private and personal.
+
+## 👤 Author
+
+**Sana Iqbal**
+
+- GitHub: [@sanaiqbal-siqbal](https://github.com/sanaiqbal-siqbal)
+- LinkedIn: [Sana Iqbal](https://www.linkedin.com/in/sana-iqbal-43b947212/)
+- Email: sana.iqbal.siqbal@gmail.com
+- Location: Lahore, Pakistan
+
+## 🙏 Acknowledgments
+
+- Built with [Next.js](https://nextjs.org/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Icons from [React Icons](https://react-icons.github.io/react-icons/)
+- Animations from [Lottie](https://lottiefiles.com/)
+
+---
+
+⭐ If you find this portfolio helpful, feel free to fork and customize it for your own use!
