@@ -1,6 +1,5 @@
 export const contactsData = {
     email: 'sana.iqbal.siqbal@gmail.com',
-    phone: '+923166505468',
     address: 'Punjab, Pakistan',
     github: 'https://github.com/sanaiqbal-siqbal',
     facebook: 'https://www.facebook.com/',
