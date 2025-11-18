@@ -104,7 +104,6 @@ export const personalData = {
   designation: "Your Title",
   description: "Your description...",
   email: 'your.email@example.com',
-  phone: '+1234567890',
   address: 'Your Location',
   github: 'https://github.com/yourusername',
   linkedIn: 'https://www.linkedin.com/in/yourprofile',
